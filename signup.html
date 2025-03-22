@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STARTRIT - Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white px-6 py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="assets/logo.jpg" alt="STARTRIT" class="h-16" />
+        </div>
+        <nav class="flex space-x-6">
+          <a href="index.html" class="text-[#FF4500]">Home</a>
+          <a href="driving-score.html" class="text-gray-600">Driving Score</a>
+          <a href="emergency-type.html" class="text-gray-600">Alerts</a>
+        </nav>
+        <div class="flex space-x-4 items-center">
+          <a
+            href="login.html"
+            class="border border-[#FF4500] text-[#FF4500] px-4 py-2 rounded"
+            >Login</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main
+      class="flex-grow flex items-center justify-center min-h-[calc(100vh-80px)]"
+    >
+      <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mx-4">
+        <h1 class="text-2xl font-bold text-center mb-8">Create Your Account</h1>
+        <form action="login.html" class="space-y-6">
+          <div>
+            <label for="first_name" class="block text-sm mb-2"
+              >First Name</label
+            >
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              placeholder="Enter your first name"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+              minlength="3"
+              maxlength="100"
+            />
+          </div>
+          <div>
+            <label for="last_name" class="block text-sm mb-2">Last Name</label>
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              placeholder="Enter your last name"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+              minlength="3"
+              maxlength="100"
+            />
+          </div>
+          <div>
+            <label for="date_of_birth" class="block text-sm mb-2"
+              >Date of Birth</label
+            >
+            <input
+              type="date"
+              id="date_of_birth"
+              name="date_of_birth"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm mb-2">Email ID</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+            />
+          </div>
+          <div>
+            <label for="mobile_number" class="block text-sm mb-2"
+              >Mobile Number</label
+            >
+            <input
+              type="tel"
+              id="mobile_number"
+              name="mobile_number"
+              placeholder="Enter your mobile number"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+              minlength="10"
+              maxlength="15"
+            />
+          </div>
+          <div>
+            <label for="driving_license_number" class="block text-sm mb-2"
+              >Driving License Number</label
+            >
+            <input
+              type="text"
+              id="driving_license_number"
+              name="driving_license_number"
+              placeholder="Enter your driving license number"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+              minlength="5"
+              maxlength="20"
+            />
+          </div>
+          <div>
+            <label for="location" class="block text-sm mb-2">Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter your location"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+              minlength="3"
+              maxlength="255"
+            />
+          </div>
+          <div>
+            <label for="password" class="block text-sm mb-2">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+              minlength="6"
+              maxlength="128"
+            />
+          </div>
+          <div>
+            <label for="password_confirmation" class="block text-sm mb-2"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="password_confirmation"
+              name="password_confirmation"
+              placeholder="Confirm your password"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+              required
+            />
+          </div>
+          <div class="flex items-center">
+            <input
+              type="checkbox"
+              id="terms"
+              name="terms"
+              class="mr-2"
+              required
+            />
+            <span class="text-sm"
+              >I agree to the
+              <a href="#" class="text-[#FF4500]">Terms and Conditions</a></span
+            >
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-[#FF4500] text-white py-2 rounded-md hover:bg-[#FF5722] transition-colors"
+          >
+            Sign Up
+          </button>
+          <p class="text-center text-sm">
+            Already have an account?
+            <a href="login.html" class="text-[#FF4500]">Login</a>
+          </p>
+        </form>
+      </div>
+    </main>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

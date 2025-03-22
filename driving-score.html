@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STARTRIT - Driving Score</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white px-6 py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="assets/logo.jpg" alt="STARTRIT" class="h-16" />
+        </div>
+        <nav class="flex space-x-6">
+          <a href="index.html" class="text-gray-600">Home</a>
+          <a
+            href="driving-score.html"
+            class="text-[#FF4500] border-b-2 border-[#FF4500]"
+            >Driving Score</a
+          >
+          <a href="emergency-type.html" class="text-gray-600">Alerts</a>
+        </nav>
+        <div class="flex space-x-4">
+          <a
+            href="login.html"
+            class="border border-[#FF4500] text-[#FF4500] px-4 py-2 rounded"
+            >Logout</a
+          >
+          <div class="relative">
+            <button
+              onclick="document.getElementById('profileDropdown').classList.toggle('hidden')"
+              class="bg-[#FF4500] text-white px-4 py-2 rounded flex items-center"
+            >
+              Profile
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="profileDropdown"
+              class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
+            >
+              <a
+                href="profile.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >Profile Settings</a
+              >
+              <a
+                href="dashboard.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >Dashboard</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+      <h2 class="text-2xl font-bold text-center mb-8">
+        Driving Parameters Input
+      </h2>
+
+      <div class="grid grid-cols-2 gap-8">
+        <!-- Left Column -->
+        <div class="space-y-6">
+          <div>
+            <label class="block text-sm mb-2">Lane Discipline</label>
+            <input
+              type="text"
+              placeholder="Select lane discipline"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm mb-2">Speed Compliance</label>
+            <input
+              type="text"
+              placeholder="Select speed compliance"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm mb-2">Penalty/Ticket History</label>
+            <input
+              type="text"
+              placeholder="Select penalty history"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+            />
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-6">
+          <div>
+            <label class="block text-sm mb-2">Compliance Record</label>
+            <input
+              type="text"
+              placeholder="Select compliance record"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm mb-2">Incident History</label>
+            <input
+              type="text"
+              placeholder="Select incident history"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm mb-2">Vehicle Maintenance</label>
+            <input
+              type="text"
+              placeholder="Select vehicle maintenance"
+              class="w-full px-4 py-2 border border-gray-200 rounded-md"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <div class="mt-8 text-center">
+        <button
+          class="orange-button text-white px-8 py-3 rounded-md w-full max-w-md"
+        >
+          Calculate Score
+        </button>
+      </div>
+
+      <!-- Score Display Section -->
+      <div class="mt-12 text-center">
+        <h3 class="text-2xl font-bold mb-6">Your Driving Score</h3>
+        <div class="score-meter">
+          <div class="meter">
+            <img
+              src="assets/indicator-gauge (2).png"
+              alt="Score Gauge"
+              class="gauge-image"
+            />
+            <div class="needle"></div>
+          </div>
+          <div class="score-ranges">
+            <div class="range">
+              <span>Poor</span>
+              <span>0-25</span>
+            </div>
+            <div class="range">
+              <span>Average</span>
+              <span>26-50</span>
+            </div>
+            <div class="range">
+              <span>Good</span>
+              <span>51-75</span>
+            </div>
+            <div class="range">
+              <span>Excellent</span>
+              <span>76+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Include the auth.js to check the login status -->
+    <script src="js/auth.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

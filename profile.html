@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STARTRIT - User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white px-6 py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="assets/logo.jpg" alt="STARTRIT" class="h-16" />
+        </div>
+        <nav class="flex space-x-6">
+          <a href="index.html" class="text-gray-600">Home</a>
+          <a href="driving-score.html" class="text-gray-600">Driving Score</a>
+          <a href="emergency-type.html" class="text-gray-600">Alerts</a>
+        </nav>
+        <div class="flex space-x-4">
+          <a
+            href="login.html"
+            class="border border-[#FF4500] text-[#FF4500] px-4 py-2 rounded"
+            >Logout</a
+          >
+          <div class="relative">
+            <button
+              onclick="document.getElementById('profileDropdown').classList.toggle('hidden')"
+              class="bg-[#FF4500] text-white px-4 py-2 rounded flex items-center"
+            >
+              Profile
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              id="profileDropdown"
+              class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
+            >
+              <a
+                href="profile.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >Profile Settings</a
+              >
+              <a
+                href="dashboard.html"
+                class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >Dashboard</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-2xl">
+      <h1 class="text-3xl font-bold text-center mb-12">User Profile Details</h1>
+
+      <div class="flex flex-col items-center">
+        <!-- Profile Image -->
+        <div class="mb-8">
+          <img
+            src="assets/icon.png"
+            alt="Profile Picture"
+            class="w-32 h-32 rounded-lg object-cover"
+          />
+        </div>
+
+        <!-- User Name -->
+        <h2 class="text-2xl font-semibold mb-8">John Doe</h2>
+
+        <!-- User Details -->
+        <div class="w-full max-w-md space-y-6">
+          <div>
+            <h3 class="text-gray-600 mb-1">Phone Number</h3>
+            <p>+91 73698 52468</p>
+          </div>
+          <div>
+            <h3 class="text-gray-600 mb-1">Email Address</h3>
+            <p>mike@gmail.com</p>
+          </div>
+          <div>
+            <h3 class="text-gray-600 mb-1">Home Address</h3>
+            <p>Chennai, Tamil Nadu, India</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logout Section -->
+      <div class="mt-16 text-center">
+        <h2 class="text-[#FF4500] text-3xl font-bold mb-4">Confirm Logout</h2>
+        <p class="text-gray-600 mb-8">
+          Are you sure you want to log out? Logging out will end your current
+          session and require re-authentication to access your account.
+        </p>
+        <button
+          onclick="window.location.href='login.html'"
+          class="bg-black text-white px-8 py-2 rounded"
+        >
+          Log out
+        </button>
+      </div>
+    </main>
+    <!-- Include the auth.js to check the login status -->
+    <script src="js/auth.js"></script>
+  </body>
+</html>
