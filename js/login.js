@@ -52,12 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // Check if the response contains the token
       if (responseData.token) {
         // Store the token in localStorage
-        localStorage.setItem("local-auth-token", responseData.token);
-        localStorage.setItem("email", email);
+        sessionStorage.setItem("local-auth-token", responseData.token);
+        sessionStorage.setItem("email", email);
         console.log("Auth token stored in localStorage:", responseData.token); // Log token to console
         console.log(
           "Auth token stored in localStorage:",
-          localStorage.getItem("email")
+          sessionStorage.getItem("email")
         ); // Log token to console
 
         // Optionally, you can redirect to another page after successful login

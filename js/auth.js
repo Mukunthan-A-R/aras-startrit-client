@@ -1,7 +1,7 @@
 // Function to check if the user is logged in by verifying the presence of token in localStorage
 function isUserLoggedIn() {
   // Check if the 'local-auth-token' is stored in localStorage
-  const token = localStorage.getItem("local-auth-token");
+  const token = sessionStorage.getItem("local-auth-token");
 
   // Return true if token exists, otherwise false
   return token !== null;
@@ -18,7 +18,7 @@ if (isUserLoggedIn()) {
 // logout token
 function logout() {
   // Remove the token from localStorage
-  localStorage.removeItem("local-auth-token");
+  sessionStorage.removeItem("local-auth-token");
 
   // Redirect the user to the login page (or another page)
   window.location.href = "login.html"; // You can change this to another page if needed
